@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "version": "tsc --version",
-    "build": "tsc"
+    "build": "tsc 04-clases"
   },
   "keywords": [],
   "author": "",
