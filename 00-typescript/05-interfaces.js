@@ -20,3 +20,8 @@ var mascotas = [];
 mascotas.push(new Gato());
 mascotas.push(new Perro());
 mascotas.forEach(function (m) { return console.log(m.hablar()); });
+var position = {
+    lat: 32,
+    long: 34
+};
+console.log(position);
