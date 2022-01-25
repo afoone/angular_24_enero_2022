@@ -1,0 +1,46 @@
+<ng-template #fav><div>*</div></ng-template>
+
+<div class="stock-list">
+
+  <div class="stock-item" *ngFor="let stock of stocks; index as i" [ngStyle]="{
+    'background-color': i%2 === 1 ? 'white': 'lightgrey'
+  }">
+    <div class="stock-name">
+      {{i}} - {{stock.name}}
+    </div>
+    <div class="stock-code">
+      {{stock.code}}
+    </div>
+    <!-- <div [ngClass]="
+    {
+      subiendo: stock.isSubiendo(),
+      bajando: !stock.isSubiendo(),
+      'stock-price': true
+    }
+    " >
+      {{stock.price}}
+    </div> -->
+
+    <div [class.subiendo] = "stock.isSubiendo()" [class.bajando] = "!stock.isSubiendo()" class="stock-price"
+      [ngStyle]="
+      {
+        'font-weight': stock.price - stock.previousPrice > 3 ? 'bold': 'normal'
+      }
+      "
+    >
+      {{stock.price}}
+    </div>
+
+    <!-- <button (click)="setFavorite()" *ngIf="!stock.favorite else fav">Favorito</button> -->
+    <button (click)="setFavorite(i)" *ngIf="!stock.favorite">Favorito</button>
+    <div *ngIf="stock.favorite">*</div>
+
+    <div [ngSwitch]="stock.code">
+      <div *ngSwitchCase="'TEL'">Viva telefónica!</div>
+      <div *ngSwitchCase="'OCT'">Los más baratos!</div>
+      <div *ngSwitchDefault >No somos nadie</div>
+    </div>
+
+  </div>
+
+</div>
