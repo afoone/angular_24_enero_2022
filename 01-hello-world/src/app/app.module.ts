@@ -2,12 +2,14 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { CocheComponent } from './components/coche-object/coche.component';
 import {TitleComponent} from './components/title.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    TitleComponent
+    TitleComponent,
+    CocheComponent
   ],
   imports: [
     BrowserModule

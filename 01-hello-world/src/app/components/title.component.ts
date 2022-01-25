@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   // interpolation: ["**", "**"]
 })
 export class TitleComponent {
-  title: string = 'Mi titulo en variable';
+  public title: string = 'Mi titulo en variable';
 }
