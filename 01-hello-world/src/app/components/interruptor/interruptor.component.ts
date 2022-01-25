@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InterruptorComponent implements OnInit {
 
-  constructor() { }
+  public luz: string
+
+  constructor() {
+    this.luz= "on"
+   }
 
   ngOnInit(): void {
   }
