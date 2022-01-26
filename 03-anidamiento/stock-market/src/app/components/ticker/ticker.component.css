@@ -1,0 +1,32 @@
+
+
+.stock-item {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0.5rem
+}
+
+.stock-name {
+  color: darkblue;
+}
+
+.stock-code {
+  font-size: 2rem;
+  color: brown;
+}
+
+.stock-price {
+  font-size: 1.8rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.subiendo {
+  color: green;
+}
+
+.bajando {
+  color: red
+}

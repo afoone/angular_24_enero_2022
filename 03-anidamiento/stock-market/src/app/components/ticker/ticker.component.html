@@ -1,0 +1,29 @@
+<div class="stock-item" *ngIf="stock">
+  <div class="stock-name">
+    {{ stock.name }}
+  </div>
+  <div class="stock-code">
+    {{ stock.code }}
+  </div>
+  <div
+    [class.subiendo]="stock.isSubiendo()"
+    [class.bajando]="!stock.isSubiendo()"
+    class="stock-price"
+    [ngStyle]="{
+      'font-weight': stock.price - stock.previousPrice > 3 ? 'bold' : 'normal'
+    }"
+  >
+    {{ stock.price }}
+  </div>
+
+  <button (click)="setFavorite()" *ngIf="!stock.favorite">Favorito</button>
+  <div *ngIf="stock.favorite">*</div>
+
+  <button (click)="deleteStock()">Eliminar</button>
+
+  <div [ngSwitch]="stock.code">
+    <div *ngSwitchCase="'TEL'">Viva telefónica!</div>
+    <div *ngSwitchCase="'OCT'">Los más baratos!</div>
+    <div *ngSwitchDefault>No somos nadie</div>
+  </div>
+</div>
