@@ -1,2 +1,3 @@
 <h1>fotos</h1>
-<fotos-fotos-list></fotos-fotos-list>
+<fotos-search (search)="onSearch($event)"></fotos-search>
+<fotos-fotos-list [search]="search"></fotos-fotos-list>

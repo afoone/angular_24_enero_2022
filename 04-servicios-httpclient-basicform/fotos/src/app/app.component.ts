@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'fotos';
+  public search: string;
+
+  constructor() {
+    this.search = ""
+  }
+
+  onSearch(search: string) {
+    this.search = search
+  }
 }
