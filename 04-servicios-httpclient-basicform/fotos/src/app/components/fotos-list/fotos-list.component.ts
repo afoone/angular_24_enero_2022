@@ -35,6 +35,16 @@ export class FotosListComponent
         this.fotos = fotos.results;
       });
   }
+
+  masFotos() {
+    this._fotosService.masFotos().subscribe(
+      (fotos) => {
+        //this.fotos.push(...fotos.results)
+        this.fotos = [...this.fotos, ...fotos.results]
+      }
+    )
+  }
+
   ngDoCheck(): void {
     console.log('do check');
   }

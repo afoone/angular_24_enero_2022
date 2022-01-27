@@ -16,4 +16,8 @@ export class FotosItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isVertical():boolean {
+    return this.foto ? this.foto?.height > this.foto?.width : true
+  }
+
 }

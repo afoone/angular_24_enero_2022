@@ -7,6 +7,8 @@ import { FotosListComponent } from './components/fotos-list/fotos-list.component
 import { FotosItemComponent } from './components/fotos-item/fotos-item.component';
 import { SearchComponent } from './components/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { CompComponent } from './comp/comp.component';
+import { PrimaryButtonComponent } from './components/basic/primary-button/primary-button.component';
 
 
 @NgModule({
@@ -14,7 +16,9 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     FotosListComponent,
     FotosItemComponent,
-    SearchComponent
+    SearchComponent,
+    CompComponent,
+    PrimaryButtonComponent
   ],
   imports: [
     BrowserModule,

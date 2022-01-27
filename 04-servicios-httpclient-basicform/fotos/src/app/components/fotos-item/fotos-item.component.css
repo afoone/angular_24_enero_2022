@@ -1,0 +1,11 @@
+img {
+  height: 200px;
+}
+
+.vertical {
+  flex-grow: 1;
+}
+
+.horizontal {
+  flex-grow: 2;
+}
