@@ -1,0 +1,30 @@
+<div>
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Diagnostics</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>
+          {{patient.id }}
+        </td>
+        <td>
+          {{patient.name | patientName }}
+        </td>
+        <td>
+          {{patient.sex}}
+        </td>
+        <td>
+          {{patient.age| suma: 100000}}
+        </td>
+        <td>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
