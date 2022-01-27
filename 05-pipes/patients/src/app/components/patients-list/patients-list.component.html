@@ -1,1 +1,28 @@
-<p>patients-list works!</p>
+<div>
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th>Diagnostics</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>
+          {{patient.id}}
+        </td>
+        <td>
+          {{patient.name}}
+        </td>
+        <td>
+          {{patient.sex}}
+        </td>
+        <td>
+          {{patient.age}}
+        </td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
