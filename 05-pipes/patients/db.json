@@ -1,0 +1,51 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Joe Smith",
+      "sex": "M",
+      "age": 54,
+      "diagnostics": [
+        "malaria"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Susan Smith",
+      "sex": "F",
+      "age": 54,
+      "diagnostics": [
+        "covid19",
+        "malaria"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Babou Ceesay",
+      "sex": "M",
+      "age": 27,
+      "diagnostics": [
+        "malaria"
+      ]
+    },
+    {
+      "name": "Alfonso Tienda",
+      "sex": "M",
+      "age": 47,
+      "diagnostics": [
+        "covid19",
+        "malaria"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Pepito Pérez",
+      "sex": "M",
+      "age": 47,
+      "diagnostics": [
+        "covid19"
+      ],
+      "id": 5
+    }
+  ]
+}
