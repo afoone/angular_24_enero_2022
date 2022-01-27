@@ -10,6 +10,7 @@ import { PatientsService } from 'src/app/services/patients.service';
 export class PatientsListComponent implements OnInit {
 
   public patients: Array<Patient>
+  public date = new Date()
 
   constructor(private _patientService: PatientsService) {
     this.patients = []

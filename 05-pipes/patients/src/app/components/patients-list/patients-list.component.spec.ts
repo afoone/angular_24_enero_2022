@@ -1,4 +1,6 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MalesPipe } from 'src/app/pipes/males.pipe';
 
 import { PatientsListComponent } from './patients-list.component';
 
@@ -8,7 +10,8 @@ describe('PatientsListComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PatientsListComponent ]
+      declarations: [ PatientsListComponent, MalesPipe ],
+      imports: [HttpClientModule]
     })
     .compileComponents();
   });

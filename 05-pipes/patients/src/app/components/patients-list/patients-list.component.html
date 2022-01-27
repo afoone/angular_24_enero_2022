@@ -8,20 +8,22 @@
       <th>Diagnostics</th>
     </thead>
     <tbody>
-      <tr *ngFor="let patient of patients">
+      <tr *ngFor="let patient of patients | males: false">
         <td>
-          {{patient.id}}
+          {{patient.id }}
         </td>
         <td>
-          {{patient.name}}
+          {{patient.name | patientName }}
         </td>
         <td>
           {{patient.sex}}
         </td>
         <td>
-          {{patient.age}}
+          {{patient.age| suma: 100000}}
         </td>
-        <td></td>
+        <td>
+
+        </td>
       </tr>
     </tbody>
   </table>
