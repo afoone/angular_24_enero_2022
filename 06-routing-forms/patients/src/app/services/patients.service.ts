@@ -26,4 +26,25 @@ export class PatientsService {
   getPatients(): Observable<Patient[]> {
     return this._http.get<Patient[]>('http://localhost:3000/patients')
   }
+
+  // obtener un sólo paciente
+  getPatient = (id:number): Observable<Patient> => {
+    return this._http.get<Patient>(`http://localhost:3000/patients/${id}`)
+  }
+
+  // add Patient
+  addPatient = (patient: Patient) : Observable<Patient>{
+    return this._http.post<Patient>('http://localhost:3000/patients', patient)
+  }
+
+  // delete patient
+  deletePatient = (id: number): Observable<{}> {
+    return this._http.delete<{}>(`http://localhost:3000/patients/${id}`)
+  }
+
+
+  // update
+  updatePatient = (patient: Patient): Observable<Patient> => {
+    return this._http.put<Patient>(`http://localhost:3000/patients/${patient.id}`, patient)
+  }
 }

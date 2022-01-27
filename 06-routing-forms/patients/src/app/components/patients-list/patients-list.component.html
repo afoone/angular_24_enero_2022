@@ -1,4 +1,8 @@
 <div>
+  <a routerLink="/patients/new">
+    <button class="btn btn-primary">Nuevo Paciente</button>
+  </a>
+
   <table class="table">
     <thead>
       <th>ID</th>
@@ -10,20 +14,18 @@
     <tbody>
       <tr *ngFor="let patient of patients">
         <td>
-          {{patient.id }}
+          {{ patient.id }}
         </td>
         <td>
-          {{patient.name | patientName }}
+          {{ patient.name | patientName }}
         </td>
         <td>
-          {{patient.sex}}
+          {{ patient.sex }}
         </td>
         <td>
-          {{patient.age| suma: 100000}}
+          {{ patient.age | suma: 100000 }}
         </td>
-        <td>
-
-        </td>
+        <td></td>
       </tr>
     </tbody>
   </table>

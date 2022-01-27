@@ -10,6 +10,9 @@ import { PatientNamePipe } from './pipes/patient-name.pipe';
 import { MalesPipe } from './pipes/males.pipe';
 import { AboutComponent } from './views/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
+import { PatientFormComponent } from './components/patient-form/patient-form.component';
+import { AddPatientComponent } from './view/add-patient/add-patient.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 ;
 
 
@@ -21,12 +24,15 @@ import { HeaderComponent } from './components/header/header.component';
     PatientNamePipe,
     MalesPipe,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    PatientFormComponent,
+    AddPatientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
