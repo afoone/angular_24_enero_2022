@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Patient } from 'src/app/models/patient';
+import { PatientsService } from 'src/app/services/patients.service';
+
 
 @Component({
   selector: 'patiens-patient-form',
@@ -10,7 +12,10 @@ export class PatientFormComponent implements OnInit {
 
   public patient: Patient;
 
-  constructor() {
+  @Output('finish')
+  public finish: EventEmitter<undefined> = new EventEmitter()
+
+  constructor(private _patientService: PatientsService) {
     this.patient = {
       name: ''
     }
@@ -20,7 +25,11 @@ export class PatientFormComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.patient)
+    this._patientService.addPatient(this.patient).subscribe(
+      ()=> {
+        this.finish.emit()
+      }
+    )
   }
 
 }

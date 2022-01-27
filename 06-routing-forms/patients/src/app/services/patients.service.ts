@@ -33,12 +33,12 @@ export class PatientsService {
   }
 
   // add Patient
-  addPatient = (patient: Patient) : Observable<Patient>{
+  addPatient = (patient: Patient) : Observable<Patient> =>{
     return this._http.post<Patient>('http://localhost:3000/patients', patient)
   }
 
   // delete patient
-  deletePatient = (id: number): Observable<{}> {
+  deletePatient = (id: number): Observable<{}> => {
     return this._http.delete<{}>(`http://localhost:3000/patients/${id}`)
   }
 
