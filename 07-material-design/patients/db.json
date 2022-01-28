@@ -1,0 +1,116 @@
+{
+  "patients": [
+    {
+      "id": 1,
+      "name": "Joe Smith",
+      "sex": "M",
+      "age": 54,
+      "diagnostics": [
+        "malaria"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Susan Smith",
+      "sex": "F",
+      "age": 54,
+      "diagnostics": [
+        "covid19",
+        "malaria"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Babou Ceesay",
+      "sex": "M",
+      "age": "2733",
+      "diagnostics": [
+        "malaria"
+      ]
+    },
+    {
+      "name": "Alfonso Tienda",
+      "sex": "M",
+      "age": 47,
+      "diagnostics": [
+        "covid19",
+        "malaria"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Pepito Pérez",
+      "sex": "M",
+      "age": 47,
+      "diagnostics": [
+        "covid19"
+      ],
+      "id": 5
+    },
+    {
+      "name": "fernando martinez",
+      "age": "44",
+      "id": 7
+    },
+    {
+      "name": "Joaquin sabina",
+      "age": "77",
+      "id": 12
+    },
+    {
+      "name": "juan perez",
+      "age": 88,
+      "id": 14
+    },
+    {
+      "name": "dfddsf",
+      "age": 99,
+      "id": 15
+    }
+  ],
+  "diagnostics": [
+    {
+      "code": "sss",
+      "description": "sdfsad",
+      "id": 1
+    },
+    {
+      "code": "10ddd",
+      "description": "DIABETES",
+      "id": 2
+    },
+    {
+      "code": "100",
+      "description": "DIABETES",
+      "id": 3
+    },
+    {
+      "code": "100",
+      "description": "DIABETES",
+      "id": 4
+    },
+    {
+      "code": "100",
+      "description": "DIABETES",
+      "id": 5
+    },
+    {
+      "code": "sfs",
+      "description": "sdjf",
+      "severity": {
+        "code": "skjs",
+        "value": "lkjdsf"
+      },
+      "id": 6
+    },
+    {
+      "code": "sdf",
+      "description": "sdaf",
+      "severity": {
+        "code": "sf",
+        "value": "sdaf"
+      },
+      "id": 7
+    }
+  ]
+}

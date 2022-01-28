@@ -1,0 +1,67 @@
+<div>
+  <h2>Nuevo diagnostico</h2>
+  <form [formGroup]="diagnosticoForm" (ngSubmit)="submit()">
+    <div>
+      Code *
+      <input
+        type="text"
+        placeholder="Code"
+        class="form-control"
+        formControlName="code"
+        [class.is-invalid] = "diagnosticoForm.controls['code'].errors && showErrors"
+      >
+      <div *ngIf="diagnosticoForm.controls['code'].errors ">
+      <small *ngIf="diagnosticoForm.controls['code'].errors['required'] && showErrors">El campo es requerido</small>
+      <small *ngIf="diagnosticoForm.controls['code'].errors['maxlength']">
+        El campo no puede ser mayor que {{diagnosticoForm.controls['code'].errors['maxlength'].requiredLength}} y tienes {{diagnosticoForm.controls['code'].errors['maxlength'].actualLength}} caracteres
+      </small>
+    </div>
+    </div>
+
+    <div>
+      Description
+      <input
+        type="text"
+        placeholder="Description"
+        class="form-control"
+        formControlName="description"
+      >
+    </div>
+
+    <div formGroupName="severity">
+      <h3>Severity</h3>
+      <div>
+        Code
+        <input
+          type="text"
+          placeholder="Description"
+          class="form-control"
+          formControlName="code"
+        >
+      </div>
+      <div>
+        Value
+        <input
+          type="text"
+          placeholder="Value"
+          class="form-control"
+          formControlName="value"
+        >
+      </div>
+    </div>
+
+  <input type="submit" class="btn btn-primary" value="Save">
+
+  </form>
+
+</div>
+
+<!-- patient
+ {
+   nombre:ldskj
+   apellido:dskjf
+   direccion: {
+     calle: dfa
+     cp: 34
+   }
+ } -->

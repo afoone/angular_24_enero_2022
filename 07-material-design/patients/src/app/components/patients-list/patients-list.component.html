@@ -1,0 +1,39 @@
+<div>
+  <a routerLink="/patients/new">
+    <button class="btn btn-primary">Nuevo Paciente</button>
+  </a>
+
+  <table class="table">
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Sex</th>
+      <th>Age</th>
+      <th></th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>
+          {{ patient.id }}
+        </td>
+        <td>
+          {{ patient.name | patientName }}
+        </td>
+        <td>
+          {{ patient.sex }}
+        </td>
+        <td>
+          {{ patient.age | suma: 100000 }}
+        </td>
+        <td>
+          <a [routerLink]="['/patients/'+patient.id]">
+            <button class="btn">Edit</button>
+          </a>
+          <button class="btn"  (click)="delete(patient.id)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
