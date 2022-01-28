@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Patient } from 'src/app/models/patient';
 import { PatientsService } from 'src/app/services/patients.service';
 
@@ -10,10 +10,12 @@ import { PatientsService } from 'src/app/services/patients.service';
 })
 export class PatientFormComponent implements OnInit {
 
-  public patient: Patient;
+  @Input('patient')
+  public patient: Patient
 
   @Output('finish')
   public finish: EventEmitter<undefined> = new EventEmitter()
+
 
   constructor(private _patientService: PatientsService) {
     this.patient = {
@@ -25,11 +27,25 @@ export class PatientFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this._patientService.addPatient(this.patient).subscribe(
-      ()=> {
-        this.finish.emit()
-      }
-    )
+    if (this.patient.id) {
+      this._patientService.updatePatient(this.patient).subscribe(
+        () => {
+          this.finish.emit()
+        }
+      )
+    } else {
+      this._patientService.addPatient(this.patient).subscribe(
+        ()=> {
+          this.finish.emit()
+        }
+      )
+    }
+
+
+  }
+
+  back() {
+    this.finish.emit()
   }
 
 }

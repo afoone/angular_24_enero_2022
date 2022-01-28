@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DiagnosticosFormComponent } from './components/diagnosticos-form/diagnosticos-form.component';
 import { PatientsListComponent } from './components/patients-list/patients-list.component';
 import { AddPatientComponent } from './view/add-patient/add-patient.component';
 import { AboutComponent } from './views/about/about.component';
@@ -17,7 +18,9 @@ const routes: Routes = [
   },
   { path: 'about', component: AboutComponent },
   { path: 'patients/new', component: AddPatientComponent },
+  { path: 'diagnosticos/new', component: DiagnosticosFormComponent },
   {path: 'patients/:id', component: EditPatientComponent},
+
 
 
 ];

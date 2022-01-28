@@ -14,6 +14,7 @@ import { PatientFormComponent } from './components/patient-form/patient-form.com
 import { AddPatientComponent } from './view/add-patient/add-patient.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPatientComponent } from './views/edit-patient/edit-patient.component';
+import { DiagnosticosFormComponent } from './components/diagnosticos-form/diagnosticos-form.component';
 ;
 
 
@@ -28,7 +29,8 @@ import { EditPatientComponent } from './views/edit-patient/edit-patient.componen
     HeaderComponent,
     PatientFormComponent,
     AddPatientComponent,
-    EditPatientComponent
+    EditPatientComponent,
+    DiagnosticosFormComponent
   ],
   imports: [
     BrowserModule,

@@ -19,4 +19,11 @@ describe('PatientNamePipe', () => {
     expect(pipe.transform("julia lópez")).toBe("LÓPEZ, Julia")
   }
  )
+
+ it('works with a just one name' ,
+  () => {
+    const pipe = new PatientNamePipe();
+    expect(pipe.transform("Alfonso")).toBe("Alfonso")
+  }
+ )
 });

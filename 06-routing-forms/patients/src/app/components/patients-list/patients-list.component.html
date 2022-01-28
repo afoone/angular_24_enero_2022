@@ -9,7 +9,7 @@
       <th>Name</th>
       <th>Sex</th>
       <th>Age</th>
-      <th>Diagnostics</th>
+      <th></th>
     </thead>
     <tbody>
       <tr *ngFor="let patient of patients">
@@ -25,7 +25,14 @@
         <td>
           {{ patient.age | suma: 100000 }}
         </td>
-        <td></td>
+        <td>
+          <a [routerLink]="['/patients/'+patient.id]">
+            <button class="btn">Edit</button>
+          </a>
+          <button class="btn"  (click)="delete(patient.id)">
+            Delete
+          </button>
+        </td>
       </tr>
     </tbody>
   </table>

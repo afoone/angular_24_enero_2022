@@ -23,7 +23,7 @@
       "id": 3,
       "name": "Babou Ceesay",
       "sex": "M",
-      "age": 27,
+      "age": "2733",
       "diagnostics": [
         "malaria"
       ]
@@ -50,37 +50,22 @@
     {
       "name": "fernando martinez",
       "age": "44",
-      "id": 6
-    },
-    {
-      "name": "fernando martinez",
-      "age": "44",
       "id": 7
-    },
-    {
-      "name": "ggg",
-      "age": "66",
-      "id": 8
-    },
-    {
-      "name": "ggg",
-      "age": "66",
-      "id": 9
-    },
-    {
-      "name": "juan pardo",
-      "age": "66",
-      "id": 10
-    },
-    {
-      "name": "ismael perez",
-      "age": "55",
-      "id": 11
     },
     {
       "name": "Joaquin sabina",
       "age": "77",
       "id": 12
+    },
+    {
+      "name": "juan perez",
+      "age": 88,
+      "id": 14
+    },
+    {
+      "name": "dfddsf",
+      "age": 99,
+      "id": 15
     }
   ]
 }
