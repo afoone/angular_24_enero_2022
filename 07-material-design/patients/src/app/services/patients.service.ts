@@ -3,6 +3,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Patient } from '../models/patient';
 
+import {environment} from 'src/environments/environment';
+;
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,7 +28,7 @@ export class PatientsService {
   }
 
   getPatients(): Observable<Patient[]> {
-    return this._http.get<Patient[]>('http://localhost:3000/patients')
+    return this._http.get<Patient[]>(environment.baseUrl+'/patients')
   }
 
   // obtener un sólo paciente
