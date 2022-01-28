@@ -36,7 +36,8 @@ import { DiagnosticosFormComponent } from './components/diagnosticos-form/diagno
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
