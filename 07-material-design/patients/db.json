@@ -29,16 +29,6 @@
       ]
     },
     {
-      "name": "Alfonso Tienda",
-      "sex": "M",
-      "age": 47,
-      "diagnostics": [
-        "covid19",
-        "malaria"
-      ],
-      "id": 4
-    },
-    {
       "name": "Pepito Pérez",
       "sex": "M",
       "age": 47,
@@ -46,11 +36,6 @@
         "covid19"
       ],
       "id": 5
-    },
-    {
-      "name": "fernando martinez",
-      "age": "44",
-      "id": 7
     },
     {
       "name": "Joaquin sabina",

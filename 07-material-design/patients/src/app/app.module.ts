@@ -15,6 +15,20 @@ import { AddPatientComponent } from './view/add-patient/add-patient.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditPatientComponent } from './views/edit-patient/edit-patient.component';
 import { DiagnosticosFormComponent } from './components/diagnosticos-form/diagnosticos-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTableModule} from '@angular/material/table'
+;
+;
+
+import { PrimaryButtonComponent } from './components/basic/buttons/primary-button/primary-button.component';
+
+
+;
+
+
 ;
 
 
@@ -30,14 +44,20 @@ import { DiagnosticosFormComponent } from './components/diagnosticos-form/diagno
     PatientFormComponent,
     AddPatientComponent,
     EditPatientComponent,
-    DiagnosticosFormComponent
+    DiagnosticosFormComponent,
+    PrimaryButtonComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
