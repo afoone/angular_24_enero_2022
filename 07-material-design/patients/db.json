@@ -20,15 +20,6 @@
       ]
     },
     {
-      "id": 3,
-      "name": "Babou Ceesay",
-      "sex": "M",
-      "age": "2733",
-      "diagnostics": [
-        "malaria"
-      ]
-    },
-    {
       "name": "Pepito Pérez",
       "sex": "M",
       "age": 47,
@@ -46,11 +37,6 @@
       "name": "juan perez",
       "age": 88,
       "id": 14
-    },
-    {
-      "name": "dfddsf",
-      "age": 99,
-      "id": 15
     }
   ],
   "diagnostics": [

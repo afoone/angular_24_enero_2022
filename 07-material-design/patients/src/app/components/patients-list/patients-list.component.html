@@ -3,7 +3,13 @@
     <primary-button value="Nuevo Paciente"></primary-button>
   </a>
 
-  <table mat-table [dataSource]="patients" class="mat-elevation-z8">
+  <!-- <ul>
+    <li *ngFor="let patient of $patientObservable | async">
+      {{patient.name}}
+    </li>
+  </ul> -->
+
+  <table mat-table [dataSource]="$patientObservable" class="mat-elevation-z8">
     <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef>ID <span (click)="removeColumn('id')">X</span></th>
       <td mat-cell *matCellDef="let patient">{{ patient.id }}</td>
