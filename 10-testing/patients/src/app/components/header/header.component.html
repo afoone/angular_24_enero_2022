@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <a [routerLink]="['/']"> <span>Patients</span></a>
+  <a [routerLink]="['patients/list']">
+    <button
+      mat-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      Lista de pacientes
+    </button>
+  </a>
+  <a [routerLink]="['diagnosticos/new']">
+    <button
+      mat-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      Nuevo diagnóstico
+    </button>
+  </a>
+
+  <a [routerLink]="['about']">
+    <button
+      mat-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      About
+    </button>
+  </a>
+</mat-toolbar>
