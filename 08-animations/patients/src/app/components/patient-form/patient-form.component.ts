@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Patient } from 'src/app/models/patient';
 import { PatientsService } from 'src/app/services/patients.service';
@@ -6,7 +7,27 @@ import { PatientsService } from 'src/app/services/patients.service';
 @Component({
   selector: 'patiens-patient-form',
   templateUrl: './patient-form.component.html',
-  styleUrls: ['./patient-form.component.css']
+  styleUrls: ['./patient-form.component.css'],
+  animations: [
+    trigger('buttonAnimation',
+    [
+      transition('*=>*', animate('1s')),
+      state(
+        'enabled',
+        style({
+          backgroundColor: 'blue',
+          transform: 'translateX(600px)'
+        })
+      ),
+      state(
+        'disabled',
+        style({
+          backgroundColor: 'grey'
+        })
+      )
+
+    ])
+  ]
 })
 export class PatientFormComponent implements OnInit {
 

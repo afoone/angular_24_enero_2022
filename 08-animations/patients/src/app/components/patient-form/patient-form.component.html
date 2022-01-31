@@ -34,8 +34,11 @@
       </div>
   </div>
 
-  <input type="submit" class="btn btn-primary" [value]="patient.id? 'Update': 'Save'" [disabled]="age.invalid || name.invalid">
+  <div style="width: 100%;">
+  <input type="submit" class="btn btn-primary" [value]="patient.id? 'Update': 'Save'"
+    [@buttonAnimation] = "!age.invalid && !name.invalid ? 'enabled' : 'disabled'" [disabled]="age.invalid || name.invalid">
   <input type="button" class="btn btn-warn" value="Cancel" (click)="back()">
+</div>
 
 
   </form>

@@ -21,16 +21,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTableModule} from '@angular/material/table'
 import {MatInputModule} from '@angular/material/input'
-;
-;
-
 import { PrimaryButtonComponent } from './components/basic/buttons/primary-button/primary-button.component';
-
-
-;
-
-
-;
 
 
 @NgModule({
