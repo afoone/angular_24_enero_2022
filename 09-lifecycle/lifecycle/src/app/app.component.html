@@ -1,0 +1,7 @@
+<button (click)="toggle()">mostrar ocultar</button>
+
+<input type="text" [(ngModel)]="text">
+
+
+
+<app-prueba *ngIf="show" [texto]="text" ></app-prueba>

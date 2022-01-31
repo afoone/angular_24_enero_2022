@@ -1,0 +1,10 @@
+
+<div>{{texto}}</div>
+
+<ul *ngIf="arr">
+  <li *ngFor="let n of arr.content">{{n}}</li>
+</ul>
+
+<div *ngIf="alert">
+  El array tiene cinco elementos
+</div>
