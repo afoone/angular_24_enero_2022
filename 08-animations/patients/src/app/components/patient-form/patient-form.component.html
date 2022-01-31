@@ -1,0 +1,42 @@
+<div class="patient-form">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        placeholder="Enter patient's name"
+        [(ngModel)]="patient.name"
+        #name = "ngModel"
+        required
+        minlength="4"
+        >
+      <div *ngIf="name.invalid">
+        <small *ngIf="name.errors && name.errors['required']">Este campo es obligatorio</small>
+        <small *ngIf="name.errors && name.errors['minlength']">El campo ha de tener por lo menos cuatro caracteres</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Age</label>
+      <input type="number"
+      class="form-control"
+      id="age"
+      name="age"
+      placeholder="Enter patient's age"
+      [(ngModel)]="patient.age"
+      #age = "ngModel"
+      max="99"
+      >
+      <div *ngIf="age.invalid">
+        <small *ngIf="age.errors && age.errors['max']">La edad máxima son 99</small>
+      </div>
+  </div>
+
+  <input type="submit" class="btn btn-primary" [value]="patient.id? 'Update': 'Save'" [disabled]="age.invalid || name.invalid">
+  <input type="button" class="btn btn-warn" value="Cancel" (click)="back()">
+
+
+  </form>
+</div>

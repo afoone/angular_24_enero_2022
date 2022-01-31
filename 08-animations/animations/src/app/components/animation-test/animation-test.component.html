@@ -1,0 +1,20 @@
+
+<button (click)="toggle()">Abrir / Cerrar</button>
+
+<div [@open-close]="open ? 'open' : 'close'">
+  El componente está ahora mismo {{ open ? "abierto" : "cerrado" }}
+
+
+  <p *ngIf="open">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam accumsan
+    consectetur orci quis tincidunt. Phasellus maximus purus urna, quis eleifend
+    augue volutpat a. Morbi bibendum nisi quis tortor euismod, ac semper nisi
+    pellentesque. Donec semper enim id consequat posuere. Lorem ipsum dolor sit
+    amet, consectetur adipiscing elit. Maecenas non vestibulum nulla. Donec
+    feugiat, elit ac euismod commodo, urna ipsum blandit sem, sed vehicula diam
+    lacus sit amet metus. Etiam nibh enim, cursus quis felis ut, dignissim
+    commodo risus. In porta nunc nec accumsan dapibus. Praesent vulputate
+    pellentesque tortor vel ornare. Etiam sed quam sed risus vulputate eleifend
+    quis id ligula.
+  </p>
+</div>
