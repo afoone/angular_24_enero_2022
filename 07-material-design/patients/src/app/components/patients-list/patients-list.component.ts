@@ -25,7 +25,7 @@ export class PatientsListComponent implements OnInit {
 
   removeColumn(column: string) {
     this.columns = this.columns.filter((x) => x !== column);
-    console.log(this.columns)
+    console.log(this.columns);
   }
 
   ngOnInit(): void {
@@ -37,8 +37,8 @@ export class PatientsListComponent implements OnInit {
       return;
     }
     this._patientService.deletePatient(id).subscribe(() => {
-      //this.patients = this.patients.filter(p => p.id !== id)
-      this.refreshPatients();
+      this.patients = this.patients.filter((p) => p.id !== id);
+      //this.refreshPatients();
     });
   }
 }

@@ -33,22 +33,22 @@ export class PatientsService {
 
   // obtener un sólo paciente
   getPatient = (id:number): Observable<Patient> => {
-    return this._http.get<Patient>(`http://localhost:3000/patients/${id}`)
+    return this._http.get<Patient>(environment.baseUrl + `/patients/${id}`)
   }
 
   // add Patient
   addPatient = (patient: Patient) : Observable<Patient> =>{
-    return this._http.post<Patient>('http://localhost:3000/patients', patient)
+    return this._http.post<Patient>(environment.baseUrl + '/patients', patient)
   }
 
   // delete patient
   deletePatient = (id: number): Observable<{}> => {
-    return this._http.delete<{}>(`http://localhost:3000/patients/${id}`)
+    return this._http.delete<{}>(environment.baseUrl + `/patients/${id}`)
   }
 
 
   // update
   updatePatient = (patient: Patient): Observable<Patient> => {
-    return this._http.put<Patient>(`http://localhost:3000/patients/${patient.id}`, patient)
+    return this._http.put<Patient>(environment.baseUrl + `/patients/${patient.id}`, patient)
   }
 }
